@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Enter new marker</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+          integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+</head>
+<body>
+<form class="pure-form" style="padding-left: 20px" action="/marker/" method="post"
+      enctype="application/x-www-form-urlencoded">
+    <fieldset class="pure-group">
+        <input type="text" class="pure-input-1-2" placeholder="Name" name="name">
+        <input type="date" class="pure-input-1-2" placeholder="created_at" name="created_at">
+        <input type="number" class="pure-input-1-2" placeholder="lat" name="lat" step="any">
+        <input type="number" class="pure-input-1-2" placeholder="lng" name="long" step="any">
+        <input type="string" class="pure-input-1-2" placeholder="art" name="art">
+        <input type="number" class="pure-input-1-2" placeholder="hofDurchmesser" name="hofDurchmesser" step="any">
+        <label for="nestStr">
+            Nestst&auml;rke
+            <select name="nestStr">
+                <option value="schwach">schwach</option>
+                <option value="mittel">mittel</option>
+                <option value="stark">stark</option>
+                <option value="sehr-stark">sehr stark</option>
+            </select>
+        </label>
+        <label for="lichVer">
+            Lichtverh&auml;ltnisse
+            <select name="lichVer">
+                <option value="sonnig">sonnig</option>
+                <option value="teil-schatten">teil-schatten</option>
+                <option value="schatten">schatten</option>
+                <option value="starker-schatten">starker schatten</option>
+            </select>
+        </label>
+        <input type="number" class="pure-input-1-2" placeholder="kuppel" name="kuppel" step="any">
+    </fieldset>
+
+    <fieldset class="pure-group">
+        <input type="text" class="pure-input-1-2" placeholder="marken" name="marken">
+        <textarea class="pure-input-1-2" placeholder="terrainNotice" name="terrainNotice"></textarea>
+        <textarea class="pure-input-1-2" placeholder="notice" name="notice"></textarea>
+        <label for="schwester">
+            Schwesternester
+            <select name="schwester">
+                <option value="nein">nein</option>
+                <option value="wenig">wenig</option>
+                <option value="viele">viele</option>
+            </select>
+        </label>
+        <input type="number" class="pure-input-1-2" placeholder="baumAlter" name="baumAlter" step="any">
+        <input type="number" class="pure-input-1-2" placeholder="baumHoehe" name="baumHoehe" step="any">
+        <input type="string" class="pure-input-1-2" placeholder="link to picture" name="picture">
+        <label for="neuesNest" class="pure-checkbox">
+            <input id="neuesNest" type="checkbox">
+            Neues Nest
+        </label>
+    </fieldset>
+
+    <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Eintragen</button>
+    <a class="pure-button pure-button-primary" href="/user/logout">Logout</a>
+</form>
+</body>
+</html>
